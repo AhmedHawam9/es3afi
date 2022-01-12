@@ -1,0 +1,231 @@
+--setting
+
+--response
+  status 
+  message
+  data => SettingResource 
+
+
+---get_about
+
+--response
+
+status
+message
+data => AboutResource
+
+
+---our_story
+
+--response
+ status
+ message
+ data => StoryResource
+
+
+
+
+---get_services 
+
+--response 
+ status  
+ message 
+ data => ServiceResource
+
+
+---download_app
+
+--response 
+ status  
+ message 
+ data => AppResource
+
+
+---blogs
+
+--response
+  status
+  message
+  blog_title 
+  blog_text
+  data => BlogResource 
+
+
+---how_to_work
+
+--response
+  status
+  message
+  data => WorkResource 
+
+
+
+---get_map_link
+
+
+--response
+  status
+  message
+  contact_link_map 
+
+---contact_us
+  method 
+  --post 
+
+  --keys
+    name 
+    email 
+    subject_text 
+    message 
+
+
+    --response
+    status 
+    message 
+
+
+---Terms
+
+   status 
+    message 
+    data =>   TextResource
+
+
+---Privacy
+
+--response
+
+
+    status 
+    message 
+    data =>   TextResource
+
+
+---questions 
+
+ --response
+    status 
+    message 
+    data =>   TypeQuestionResource
+
+
+
+---commanblogs
+
+--response
+  status
+  message
+  data => BlogResource  // 4 elements
+
+
+
+---get_header_images
+
+--response
+  status
+  message
+  data => HeaderResource 
+
+
+
+
+-----------------------------------------------------------------------------------------------------------
+
+
+-- resources
+
+ --TypeQuestionResource 
+
+    id
+    title
+    questions => QuestionResource
+
+
+--SettingResource 
+
+id
+apple_button 
+google_button 
+link_facebook 
+link_twitter 
+link_linkedin 
+link_instgram 
+email 
+phone 
+address 
+link_location 
+
+
+--AppResource
+
+id 
+title 
+text 
+image 
+
+
+--AboutResource
+
+  id 
+  title 
+  text 
+  image 
+  
+---StoryResource 
+
+    id
+    title 
+    text
+    image
+    video
+
+-- ServiceResource 
+
+   id
+   title
+   text
+
+
+
+ --QuestionResource 
+
+  id
+  question
+  answer
+
+
+--BlogResource 
+
+  id 
+  title 
+  text 
+  image 
+  data 
+
+ --WorkResource 
+
+   id
+    work_title 
+    work_text 
+    text1 
+    text2 
+    text3 
+    text4 
+
+
+
+
+    --TextResource 
+
+    id
+    Text
+
+
+
+ -- HeaderResource
+
+    id
+    question_image_header 
+    privacy_image_header 
+    terms_image_header 
+    blogs_image_header 
