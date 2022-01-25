@@ -140,7 +140,7 @@ h2.header_text::after {
 }
 
 .about .app {
-  background-image: url(../media/image/app_circle.png);
+  /* background-image: url(../media/image/app_circle.png); */
   background-repeat: no-repeat;
   background-size: 100%;
   height: 100%;
@@ -158,6 +158,11 @@ h2.header_text::after {
   border-radius: 0 0 45% 48%;
   top: -20px;
   position: relative;
+  transition: transform 1.5s ease-in-out;
+}
+
+.about .app img:hover {
+  transform: rotate(360deg);
 }
 
 .about .btn_download {
@@ -231,6 +236,7 @@ h2.header_text::after {
   width: 85%;
   margin: 0 auto;
   display: block;
+  height: 450px;
 }
 
 .story .play {
@@ -936,8 +942,8 @@ h2.header_text::after {
   height: 100%;
 }
 /* ======= news ======= */
-.faq .faq_common h5{
-font-family: "regular";
+.faq .faq_common h5 {
+  font-family: "regular";
   color: #707070;
   display: flex;
   position: relative;
@@ -953,41 +959,41 @@ font-family: "regular";
   right: 0%;
   left: 0%;
 }
-.faq .faq_common ul{
+.faq .faq_common ul {
   padding: 0;
   list-style: none;
   width: 70%;
 }
-.faq .faq_common ul li{
+.faq .faq_common ul li {
   padding: 3% 0;
   border-bottom: 1px solid #626161;
 }
-.faq .faq_common ul li a{
+.faq .faq_common ul li a {
   color: #626161;
   font-family: "regular";
   text-decoration: none;
 }
-.faq .accordion-button::after{
+.faq .accordion-button::after {
   margin-right: auto;
   margin-left: unset;
 }
-.faq .accordion-item{
+.faq .accordion-item {
   border: none;
-  border-bottom: 1px solid rgba(0,0,0,.125);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
-.faq .accordion-item .accordion-header{
+.faq .accordion-item .accordion-header {
   font-family: "bold";
   color: #222222;
 }
-.faq .accordion-item .accordion-header .accordion-button:not(.collapsed){
+.faq .accordion-item .accordion-header .accordion-button:not(.collapsed) {
   background-color: transparent;
   color: #222222;
 }
-.faq .accordion-item .accordion-body{
+.faq .accordion-item .accordion-body {
   font-family: "regular";
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
-.faq .accordion-item .accordion-button:focus{
+.faq .accordion-item .accordion-button:focus {
   box-shadow: unset;
   border-color: none;
 }
@@ -1425,13 +1431,13 @@ footer .footer-bottom .my-heart {
   .error p {
     width: 80%;
   }
-  .breadcrumb img{
+  .breadcrumb img {
     height: 250px;
   }
-  .details_new img{
+  .details_new img {
     width: 100%;
   }
-  .details_new p{
+  .details_new p {
     width: 90%;
   }
 }
