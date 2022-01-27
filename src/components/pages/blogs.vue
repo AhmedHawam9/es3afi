@@ -1,0 +1,84 @@
+<template>
+  <section>
+    <Header />
+
+    <!-- start News section -->
+    <section class="news bg-transparent">
+      <div class="container">
+        <span>{{ $t('last_blogs')}}</span>
+        <h3 class="header_text">{{ blogs.blog_title }}</h3>
+        <p>{{ blogs.blog_text }}</p>
+        <div class="row">
+          <!-- For loop this card news -->
+          <div
+            class="col-lg-4 col-sm-12 mb-3 mb-lg-0"
+            v-for="blog in blogs"
+            :key="blog.id"
+          >
+            <div class="card card_news">
+              <img :src="blog.image" class="card-img-top" alt="news" />
+              <div class="card-body">
+                <span class="date">
+                  <i class="fas fa-calendar-day"></i>
+                  {{ blog.date }}
+                </span>
+                <h5 class="card-title">{{ blog.title }}</h5>
+                <p class="card-text">{{blog.text}}</p>
+                <!-- v-html="blog.text.substring(0,250) +' ...'" -->
+                <router-link
+                  :to="{
+                    name: 'signle-blog',
+                    params: { id: blog.id },
+                    query: {
+                      id: blog.id,
+                      title: blog.title,
+                      text: blog.text,
+                      date: blog.date,
+                    },
+                  }"
+                  class="btn btn-primary"
+                  >{{ $t('show_more')}}
+                </router-link>
+              </div>
+            </div>
+          </div>
+          <!-- For loop this card news -->
+        </div>
+      </div>
+    </section>
+    <!-- End News section -->
+    <!-- <ul>
+        <li><router-link to="/blog/1?q=1&name=test">blog1</router-link></li>
+        <li><router-link :to="{name: 'signle-blog', params: {id:2}, query: {q:2, name: 'ahmed'} }">blog2</router-link></li>
+        </ul> -->
+  </section>
+</template>
+
+<script>
+import Header from "../include/header_blog.vue";
+export default {
+  name: "blogs",
+  components: {
+    Header: Header,
+  },
+  data() {
+    return {
+      blogs: [],
+    };
+  },
+  methods: {
+    getBlogs: function () {
+      // GET /someUrl
+      fetch("https://esaafy.crazyideaco.com/public/api/get_blog")
+        .then((response) => response.json())
+        .then((json) => {
+          this.blogs = json.data.slice(0, 3);
+          // console.log(json);
+        });
+    },
+  },
+  created: function () {
+    this.getBlogs();
+  },
+};
+</script>

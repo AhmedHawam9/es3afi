@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="795" height="779" viewBox="0 0 795 779">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_104" data-name="Rectangle 104" width="795" height="779" transform="translate(150 181)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Group_151" data-name="Group 151" transform="translate(-150 -182)">
+    <g id="Mask_Group_7" data-name="Mask Group 7" transform="translate(0 1)" clip-path="url(#clip-path)">
+      <g id="Group_150" data-name="Group 150">
+        <circle id="Ellipse_3" data-name="Ellipse 3" cx="340" cy="340" r="340" transform="translate(200 229)" fill="#d3d9ff"/>
+        <g id="Ellipse_42" data-name="Ellipse 42" transform="translate(219 248)" fill="none" stroke="#4a5cd0" stroke-width="1" opacity="0.08">
+          <circle cx="321.5" cy="321.5" r="321.5" stroke="none"/>
+          <circle cx="321.5" cy="321.5" r="321" fill="none"/>
+        </g>
+        <g id="Ellipse_43" data-name="Ellipse 43" transform="translate(249 277)" fill="none" stroke="#4a5cd0" stroke-width="1" opacity="0.205">
+          <ellipse cx="292" cy="292.5" rx="292" ry="292.5" stroke="none"/>
+          <ellipse cx="292" cy="292.5" rx="291.5" ry="292" fill="none"/>
+        </g>
+        <g id="Ellipse_5" data-name="Ellipse 5" transform="translate(150 190)" fill="none" stroke="#4a95d2" stroke-width="1" stroke-dasharray="8 15" opacity="0.499">
+          <circle cx="385" cy="385" r="385" stroke="none"/>
+          <circle cx="385" cy="385" r="384.5" fill="none"/>
+        </g>
+        <circle id="eliment" cx="17.5" cy="17.5" r="17.5" transform="translate(726.958 215.608) rotate(-180)" fill="rgba(150,125,219,0.64)" opacity="0.333"/>
+        <circle id="eliment-2" data-name="eliment" cx="17.5" cy="17.5" r="17.5" transform="translate(305.958 960) rotate(-180)" fill="rgba(15,153,255,0.53)" opacity="0.523"/>
+      </g>
+    </g>
+    <g id="Group_28" data-name="Group 28" transform="translate(17.161 386)" opacity="0.86">
+      <g id="Group_26" data-name="Group 26">
+        <path id="Path_23" data-name="Path 23" d="M148.839-3.782l11.148,12,11.146-12,11.147,12,11.144-12,11.145,12,11.147-12,11.151,12,11.148-12,11.155,12,11.155-12" fill="none" stroke="#4a5cd0" stroke-miterlimit="10" stroke-width="2"/>
+      </g>
+      <g id="Group_27" data-name="Group 27">
+        <path id="Path_24" data-name="Path 24" d="M148.839,13.81l11.148,12,11.146-12,11.147,12,11.144-12,11.145,12,11.147-12,11.151,12,11.148-12,11.155,12,11.155-12" fill="none" stroke="#4a5cd0" stroke-miterlimit="10" stroke-width="2"/>
+      </g>
+    </g>
+    <g id="Group_46" data-name="Group 46" transform="translate(636.606 281.191) rotate(-1)">
+      <line id="Line_3" data-name="Line 3" y1="15.212" x2="15.212" transform="translate(196.869 431.145)" fill="none" stroke="#4a5cd0" stroke-miterlimit="10" stroke-width="1.5"/>
+      <line id="Line_4" data-name="Line 4" y1="15.212" x2="15.212" transform="translate(210.13 431.145)" fill="none" stroke="#4a5cd0" stroke-miterlimit="10" stroke-width="1.5"/>
+      <line id="Line_5" data-name="Line 5" y1="15.212" x2="15.212" transform="translate(223.392 431.145)" fill="none" stroke="#4a5cd0" stroke-miterlimit="10" stroke-width="1.5"/>
+      <line id="Line_6" data-name="Line 6" y1="15.212" x2="15.212" transform="translate(236.653 431.145)" fill="none" stroke="#4a5cd0" stroke-miterlimit="10" stroke-width="1.5"/>
+      <line id="Line_7" data-name="Line 7" y1="15.212" x2="15.212" transform="translate(249.914 431.145)" fill="none" stroke="#4a5cd0" stroke-miterlimit="10" stroke-width="1.5"/>
+      <line id="Line_8" data-name="Line 8" y1="15.212" x2="15.212" transform="translate(263.175 431.145)" fill="none" stroke="#4a5cd0" stroke-miterlimit="10" stroke-width="1.5"/>
+      <line id="Line_9" data-name="Line 9" y1="15.212" x2="15.212" transform="translate(276.436 431.145)" fill="none" stroke="#4a5cd0" stroke-miterlimit="10" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>
