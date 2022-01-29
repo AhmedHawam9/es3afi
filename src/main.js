@@ -10,6 +10,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap"
 import "toastify-js/src/toastify.css"
 
+
 axios.defaults.baseURL = "https://esaafy.crazyideaco.com/public";
 
 Vue.use(FlagIcon);

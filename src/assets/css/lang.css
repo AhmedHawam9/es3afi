@@ -1,0 +1,356 @@
+body:lang(en) {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    direction: ltr;
+}
+
+.about:lang(en)::before {
+    content: "";
+    background-image: url("../media/image/have_circle.png");
+    background-size: 40px 110px;
+    display: inline-block;
+    width: 40px;
+    height: 110px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(180deg)
+}
+
+.work .steps>.step:lang(en):after {
+    content: url(../media/image/Line.svg);
+    position: absolute;
+    display: block;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 1rem;
+    left: 50%;
+}
+
+.work .steps>.step:last-child:lang(en):after {
+    display: none;
+}
+
+.contact h4:lang(en)::after {
+    content: "";
+    position: absolute;
+    width: 8%;
+    height: 3px;
+    background-color: var(--color-primary);
+    bottom: -10px;
+    left: 0;
+}
+
+.news .card_news .btn:lang(en)::after {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 2px;
+    background-color: var(--color-primary);
+    bottom: 10px;
+    left: 1.5rem;
+}
+
+.about h5:lang(en)::before {
+    content: "";
+    width: 10%;
+    margin-right: 0.7rem;
+    height: 4px;
+    border-radius: 3px;
+    background-color: var(--color-primary);
+}
+
+.work .screens img:first-child:lang(en) {
+    position: relative;
+    right: -7%;
+    z-index: -1;
+}
+
+.work .screens img:last-child:lang(en) {
+    position: relative;
+    left: -7%;
+    z-index: -1;
+}
+
+.error h2:lang(en)::before {
+    content: "";
+    width: 15%;
+    margin-right: 1rem;
+    height: 2px;
+    background-color: var(--color-primary);
+}
+
+.error h2:lang(en)::after {
+    content: "";
+    width: 15%;
+    margin-left: 1rem;
+    height: 2px;
+    background-color: var(--color-primary);
+}
+
+.details_new .category_new ul li:lang(en)::before {
+    content: "\2022";
+    color: var(--color-primary);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    transform: scale(2);
+    margin-left: 1em;
+}
+
+.faq .accordion-button:lang(en)::after {
+    margin-left: auto;
+    margin-right: unset;
+}
+
+footer .socialicon li a:lang(en):before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+footer .col-links .h3:lang(en)::after {
+    content: "";
+    position: absolute;
+    bottom: -15%;
+    left: 0;
+    height: 4px;
+    width: 40%;
+    background-color: #1818e6;
+    border-radius: 25px;
+    transform: translate(5px, 0px);
+}
+
+footer .contact ul li svg:lang(en) {
+    width: 1.2rem !important;
+    margin-right: 0rem;
+    color: var(--color-secound);
+}
+
+footer .email button:lang(en) {
+    position: absolute;
+    top: 15%;
+    right: 4%;
+    width: 3rem;
+    height: 2.2rem;
+    fill: #fff;
+    background-color: var(--color-secound);
+    padding: 2%;
+    border-radius: 8px;
+}
+
+footer .email button svg:lang(en) {
+    width: 2rem;
+    height: 1.5rem;
+    position: absolute;
+    top: 15%;
+    right: 15%;
+}
+
+
+@media only screen and (max-width: 991.98px) {
+    .work .screens img:first-child:lang(en) {
+        right: -15%;
+    }
+
+    .work .screens img:lang(en):last-child {
+        left: -15%;
+    }
+
+    .work .steps>.step:lang(en):after {
+        transform: rotate(90deg);
+        left: 2%;
+        top: 11rem;
+        z-index: 99;
+    }
+}
+
+
+
+
+
+
+
+
+body:lang(ar) {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    direction: rtl;
+}
+
+.about:lang(ar)::before {
+    content: "";
+    background-image: url("../media/image/have_circle.png");
+    background-size: 40px 110px;
+    display: inline-block;
+    width: 40px;
+    height: 110px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotate(360deg)
+}
+
+.work .steps>.step:lang(ar):after {
+    content: url(../media/image/Line.svg);
+    position: absolute;
+    display: block;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 1rem;
+    right: 50%;
+}
+
+.work .steps>.step:last-child:lang(ar):after {
+    display: none;
+}
+
+.contact h4:lang(ar)::after {
+    content: "";
+    position: absolute;
+    width: 8%;
+    height: 3px;
+    background-color: var(--color-primary);
+    bottom: -10px;
+    right: 0;
+}
+
+.news .card_news .btn:lang(ar)::after {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 2px;
+    background-color: var(--color-primary);
+    bottom: 10px;
+    right: 1.5rem;
+}
+
+.about h5:lang(ar)::before {
+    content: "";
+    width: 10%;
+    margin-left: 0.7rem;
+    height: 4px;
+    border-radius: 3px;
+    background-color: var(--color-primary);
+}
+
+.work .screens img:first-child:lang(ar) {
+    position: relative;
+    left: -7%;
+    z-index: -1;
+}
+
+.work .screens img:last-child:lang(ar) {
+    position: relative;
+    right: -7%;
+    z-index: -1;
+}
+
+.error h2:lang(ar)::before {
+    content: "";
+    width: 15%;
+    margin-left: 1rem;
+    height: 2px;
+    background-color: var(--color-primary);
+}
+
+.error h2:lang(ar)::after {
+    content: "";
+    width: 15%;
+    margin-right: 1rem;
+    height: 2px;
+    background-color: var(--color-primary);
+}
+
+.details_new .category_new ul li:lang(ar)::before {
+    content: "\2022";
+    color: var(--color-primary);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    transform: scale(2);
+    margin-right: 1em;
+}
+
+.faq .accordion-button:lang(ar)::after {
+    margin-right: auto;
+    margin-left: unset;
+}
+
+footer .socialicon li a:lang(ar):before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+footer .col-links .h3:lang(ar)::after {
+    content: "";
+    position: absolute;
+    bottom: -15%;
+    right: 0;
+    height: 4px;
+    width: 40%;
+    background-color: #1818e6;
+    border-radius: 25px;
+    transform: translate(5px, 0px);
+}
+
+footer .contact ul li svg:lang(ar) {
+    width: 1.2rem !important;
+    margin-left: 0rem;
+    color: var(--color-secound);
+}
+
+footer .email button:lang(ar) {
+    position: absolute;
+    top: 15%;
+    left: 4%;
+    width: 3rem;
+    height: 2.2rem;
+    fill: #fff;
+    background-color: var(--color-secound);
+    padding: 2%;
+    border-radius: 8px;
+}
+
+footer .email button svg:lang(ar) {
+    width: 2rem;
+    height: 1.5rem;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+}
+
+
+@media only screen and (max-width: 991.98px) {
+    .work .screens img:first-child:lang(ar) {
+        left: -15%;
+    }
+
+    .work .screens img:lang(ar):last-child {
+        right: -15%;
+    }
+
+    .work .steps>.step:lang(ar):after {
+        transform: rotate(90deg);
+        right: 2%;
+        top: 11rem;
+        z-index: 99;
+    }
+}

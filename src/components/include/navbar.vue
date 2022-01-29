@@ -58,8 +58,8 @@
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-            <!-- lang -->
-            <i class="fas fa-globe-americas mx-1"></i>
+              <!-- lang -->
+              <i class="fas fa-globe-americas mx-1"></i>
             </a>
 
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -103,7 +103,21 @@ export default {
   methods: {
     changeLocale(locale) {
       i18n.locale = locale;
+      // if (locale == "ar") {
+      //   require("../../assets/css/main_rtl.css");
+      // } else if (locale == "en") {
+      //   require("../../assets/css/main_ltr.css");
+      // }
+      const html = document.documentElement; // returns the html tag
+      html.setAttribute("lang", locale);
+      // console.log(locale);
     },
+  },
+
+  created() {
+    const html = document.documentElement; // returns the html tag
+      html.setAttribute("lang", i18n.locale);
+      // console.log(i18n.locale);
   },
 };
 </script>
