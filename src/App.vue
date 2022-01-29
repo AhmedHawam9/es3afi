@@ -16,8 +16,10 @@ require("./assets/js/fontawesome.min.js");
 require("./assets/js/all.min.js");
 require("./assets/css/fontawesome.min.css");
 require("./assets/css/hover-min.css");
-require("./assets/css/lang.css");
-require("./assets/css/style.css");
+// require("./assets/css/lang.css");
+// require("./assets/css/style.css");
+require("./assets/css/main_rtl.css");
+require("./assets/css/main_ltr.css");
 
 export default {
   name: "App",

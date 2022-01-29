@@ -19,6 +19,7 @@
     "vue-clickaway": "^2.2.2",
     "vue-flag-icon": "^1.0.6",
     "vue-i18n": "^8.27.0",
+    "vue-pagination-2": "^3.0.91",
     "vue-resource": "^1.5.3",
     "vue-router": "^3.5.3"
   },
