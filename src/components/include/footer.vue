@@ -38,66 +38,69 @@
         </div>
         <div class="d-lg-flex col-lg-8 col-md-12 col-sm-12 mx-auto">
           <div class="col-lg-4 col-md-12 col-sm-12 col-links">
-            <div class="h3 d-block">{{$t ('quick_links')}}</div>
+            <div class="h3 d-block">{{ $t("quick_links") }}</div>
             <div class="d-lg-block">
               <ul>
                 <li>
                   <router-link class="hvr-float-shadow" to="#"
-                    >{{$t ('contact_us')}}
+                    >{{ $t("contact_us") }}
                   </router-link>
                 </li>
                 <li>
-                  <router-link class="hvr-float-shadow" to="#"
-                    >{{$t ('download_app')}}</router-link
-                  >
+                  <router-link class="hvr-float-shadow" to="#">{{
+                    $t("download_app")
+                  }}</router-link>
                 </li>
                 <li>
                   <router-link class="hvr-float-shadow" to="#"
-                    >{{$t ('blog')}}
+                    >{{ $t("blog") }}
                   </router-link>
                 </li>
               </ul>
             </div>
           </div>
           <div class="col-lg-4 col-md-12 col-sm-12 col-links">
-            <div class="h3 d-block">{{$t ('help')}}</div>
+            <div class="h3 d-block">{{ $t("help") }}</div>
             <div class="d-lg-block">
               <ul>
                 <li>
-                  <router-link class="hvr-float-shadow" to="privacy"
-                    >{{$t ('privacy')}}</router-link
-                  >
+                  <router-link class="hvr-float-shadow" to="privacy">{{
+                    $t("privacy")
+                  }}</router-link>
                 </li>
                 <li>
-                  <router-link class="hvr-float-shadow" to="/terms"
-                    >{{$t ('terms')}}</router-link
-                  >
+                  <router-link class="hvr-float-shadow" to="/terms">{{
+                    $t("terms")
+                  }}</router-link>
                 </li>
                 <li>
-                  <router-link class="hvr-float-shadow" to="faq"
-                    >{{$t ('faq')}}</router-link
-                  >
+                  <router-link class="hvr-float-shadow" to="faq">{{
+                    $t("faq")
+                  }}</router-link>
                 </li>
               </ul>
             </div>
           </div>
           <div class="col-lg-4 col-md-12 col-sm-12 p-0 col-links">
-            <div class="h3 d-block">{{$t ('contact_info')}}</div>
+            <div class="h3 d-block">{{ $t("contact_info") }}</div>
             <ul>
               <li class="hvr-icon-buzz-out">
                 <i class="far fa-clock hvr-icon"></i>
-                <span>{{$t ('times_work')}} :08:00 {{$t ('am')}} - 09:00 {{$t ('pm')}}</span>
+                <span
+                  >{{ $t("times_work") }} :08:00 {{ $t("am") }} - 09:00
+                  {{ $t("pm") }}</span
+                >
               </li>
               <li class="hvr-icon-buzz-out">
                 <i class="fas fa-mobile-alt hvr-icon"></i>
                 <a :href="`tel:${setting.phone}`"
-                  >{{$t ('call_me')}} : {{ setting.phone }}</a
+                  >{{ $t("call_me") }} : {{ setting.phone }}</a
                 >
               </li>
               <li class="hvr-icon-buzz-out">
                 <i class="far fa-envelope hvr-icon"></i>
                 <a :href="`tel:${setting.email}`">
-                  {{ setting.email }} : {{$t ('contact_us_on')}}</a
+                  {{ setting.email }} : {{ $t("contact_us_on") }}</a
                 >
               </li>
             </ul>
@@ -111,7 +114,8 @@
           <div class="row">
             <div class="item text-center col-sm-6">
               <p class="my-3">
-                {{$t ('rights')}} @ <span class="alina"> {{$t ('es3afi')}} </span> 2021
+                {{ $t("rights") }} @
+                <span class="alina"> {{ $t("es3afi") }} </span> 2021
               </p>
             </div>
             <div class="item text-center col-sm-6">
@@ -137,6 +141,8 @@
 </template>
 
 <script>
+import i18n from "@/plugins/i18n";
+
 export default {
   name: "contact",
   data() {
@@ -147,7 +153,12 @@ export default {
   methods: {
     getSetting: function () {
       // GET /someUrl
-      fetch("https://esaafy.crazyideaco.com/public/api/get_setting")
+      fetch("https://esaafy.crazyideaco.com/public/api/get_setting", {
+        method: "get",
+        headers: {
+          "Accept-Language": i18n.locale,
+        },
+      })
         .then((response) => response.json())
         .then((json) => {
           this.setting = json.data;

@@ -28,6 +28,6 @@
     "pm": "Pm",
     "rights": "All rights are save",
     "es3afi": "Es3afi",
-    "": "",
-    "": ""
+    "succes_order": "Your order has been successfully sent",
+    "failed_order": "There is a problem in sending your order please try again"
 }

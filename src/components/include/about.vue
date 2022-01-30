@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6 col-sm-12">
-          <h5>{{ $t('welcome_about')}}</h5>
+          <h5>{{ $t("welcome_about") }}</h5>
           <h2>{{ about.title }}</h2>
           <p>{{ about.text }}</p>
           <div class="btn_download">
@@ -36,6 +36,8 @@
 </template>
 
 <script>
+import i18n from "@/plugins/i18n";
+
 export default {
   name: "about",
   data() {
@@ -47,7 +49,12 @@ export default {
   methods: {
     getAbout: function () {
       // GET /someUrl
-      fetch("https://esaafy.crazyideaco.com/public/api/get_about")
+      fetch("https://esaafy.crazyideaco.com/public/api/get_about", {
+        method: "get",
+        headers: {
+          "Accept-Language": i18n.locale,
+        },
+      })
         .then((response) => response.json())
         .then((json) => {
           this.about = json.data;
@@ -57,7 +64,12 @@ export default {
 
     getSetting: function () {
       // GET /someUrl
-      fetch("https://esaafy.crazyideaco.com/public/api/get_setting")
+      fetch("https://esaafy.crazyideaco.com/public/api/get_setting", {
+        method: "get",
+        headers: {
+          "Accept-Language": i18n.locale,
+        },
+      })
         .then((response) => response.json())
         .then((json) => {
           this.setting = json.data;

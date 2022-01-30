@@ -5,13 +5,13 @@ import routes from '../routes'
 import VueI18n from 'vue-i18n'
 import i18n from './plugins/i18n';
 import FlagIcon from 'vue-flag-icon';
-import axios from 'axios'
+// import axios from 'axios'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap"
 import "toastify-js/src/toastify.css"
 
 
-axios.defaults.baseURL = "https://esaafy.crazyideaco.com/public";
+// axios.defaults.baseURL = "https://esaafy.crazyideaco.com/public";
 
 Vue.use(FlagIcon);
 Vue.config.productionTip = false;

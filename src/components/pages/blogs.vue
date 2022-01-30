@@ -56,6 +56,8 @@
 
 <script>
 import Header from "../include/header_blog.vue";
+import i18n from "@/plugins/i18n";
+
 export default {
   name: "blogs",
   components: {
@@ -69,7 +71,12 @@ export default {
   methods: {
     getBlogs: function () {
       // GET /someUrl
-      fetch("https://esaafy.crazyideaco.com/public/api/get_blog")
+      fetch("https://esaafy.crazyideaco.com/public/api/get_blog", {
+        method: "get",
+        headers: {
+          "Accept-Language": i18n.locale,
+        },
+      })
         .then((response) => response.json())
         .then((json) => {
           this.blogs = json.data.slice(0, 3);

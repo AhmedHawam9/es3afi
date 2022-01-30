@@ -110,14 +110,18 @@ export default {
       // }
       const html = document.documentElement; // returns the html tag
       html.setAttribute("lang", locale);
+      // this.$forceUpdate('lang',locale);
+      localStorage.setItem('lang',locale)
+      location.reload();
       // console.log(locale);
     },
   },
 
   created() {
+    // changeLocale(locale)
     const html = document.documentElement; // returns the html tag
-      html.setAttribute("lang", i18n.locale);
-      // console.log(i18n.locale);
+    html.setAttribute("lang", i18n.locale);
+    // console.log(i18n.locale);
   },
 };
 </script>

@@ -2,7 +2,7 @@
   <!-- start contact section -->
   <section class="contact">
     <div class="container">
-      <h2 class="header_text">{{$t ('contact_us')}}</h2>
+      <h2 class="header_text">{{ $t("contact_us") }}</h2>
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12">
           <iframe
@@ -10,7 +10,7 @@
             allowfullscreen=""
             loading="lazy"
           ></iframe>
-          <h5>{{$t ('contact_info')}}</h5>
+          <h5>{{ $t("contact_info") }}</h5>
           <ul>
             <li>
               <i class="far fa-envelope"></i>
@@ -29,7 +29,7 @@
           </ul>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12">
-          <h4>{{$t ('communication')}}</h4>
+          <h4>{{ $t("communication") }}</h4>
           <form v-on:submit.prevent="submitForm">
             <div class="form-group">
               <input
@@ -62,16 +62,18 @@
               />
             </div>
             <div class="form-group">
-              <input
+              <textarea
                 type="text"
                 v-model="form.message"
+                cols="30"
+                rows="10"
                 id="message"
                 class="form-control"
                 :placeholder="$t('message')"
                 required
               />
             </div>
-            <button type="submit" class="btn">{{$t ('send_message')}}</button>
+            <button type="submit" class="btn">{{ $t("send_message") }}</button>
           </form>
         </div>
       </div>
@@ -83,6 +85,7 @@
 <script>
 import axios from "axios";
 import Toastify from "toastify-js";
+import i18n from "@/plugins/i18n";
 
 export default {
   name: "contact",
@@ -100,7 +103,12 @@ export default {
   methods: {
     getSetting: function () {
       // GET /someUrl
-      fetch("https://esaafy.crazyideaco.com/public/api/get_setting")
+      fetch("https://esaafy.crazyideaco.com/public/api/get_setting", {
+        method: "get",
+        headers: {
+          "Accept-Language": i18n.locale,
+        },
+      })
         .then((response) => response.json())
         .then((json) => {
           this.setting = json.data;
@@ -117,7 +125,7 @@ export default {
         .then((res) => {
           //Perform Success Action
           Toastify({
-            text: "تم ارسال طلبك بنجاح",
+            text: this.$t('succes_order'),
             className: "Success",
             duration: 3000,
             close: true,
@@ -135,7 +143,7 @@ export default {
         .catch((error) => {
           // error.response.status Check status code
           Toastify({
-            text: "هناك مشكله في ارسال طلبك الرجاء المحاولة مره اخرى",
+            text: this.$t('failed_order'),
             className: "error",
             duration: 3000,
             close: true,

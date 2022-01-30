@@ -25,6 +25,8 @@
 </template>
 
 <script>
+import i18n from "@/plugins/i18n";
+
 export default {
   name: "services",
   data() {
@@ -35,7 +37,12 @@ export default {
   methods: {
     getServices: function () {
       // GET /someUrl
-      fetch("https://esaafy.crazyideaco.com/public/api/get_service")
+      fetch("https://esaafy.crazyideaco.com/public/api/get_service", {
+        method: "get",
+        headers: {
+          "Accept-Language": i18n.locale,
+        },
+      })
         .then((response) => response.json())
         .then((json) => {
           this.services = json.data.slice(0, 3);

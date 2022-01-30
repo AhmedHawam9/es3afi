@@ -27,7 +27,7 @@
         </div>
         <!-- For loop this card news -->
         <div class="col-12">
-          <router-link to="news" class="btn btn_news">{{$t ('show_more')}} </router-link>
+          <router-link to="blogs" class="btn btn_news">{{$t ('show_more')}} </router-link>
         </div>
       </div>
     </div>
@@ -36,6 +36,8 @@
 </template>
 
 <script>
+import i18n from "@/plugins/i18n";
+
 export default {
   name: "indexnews",
   data() {
@@ -46,7 +48,12 @@ export default {
   methods: {
     getBlogs: function () {
       // GET /someUrl
-      fetch("https://esaafy.crazyideaco.com/public/api/get_blog")
+      fetch("https://esaafy.crazyideaco.com/public/api/get_blog", {
+        method: "get",
+        headers: {
+          "Accept-Language": i18n.locale,
+        },
+      })
         .then((response) => response.json())
         .then((json) => {
           this.blogs = json.data.slice(0, 3);

@@ -33,6 +33,8 @@
 
 
 <script>
+import i18n from "@/plugins/i18n";
+
 export default {
   name: "download",
   data() {
@@ -44,7 +46,12 @@ export default {
   methods: {
     getDownload: function () {
       // GET /someUrl
-      fetch("https://esaafy.crazyideaco.com/public/api/get_app")
+      fetch("https://esaafy.crazyideaco.com/public/api/get_app", {
+        method: "get",
+        headers: {
+          "Accept-Language": i18n.locale,
+        },
+      })
         .then((response) => response.json())
         .then((json) => {
           this.download = json.data;
@@ -54,7 +61,12 @@ export default {
     
     getSetting: function () {
       // GET /someUrl
-      fetch("https://esaafy.crazyideaco.com/public/api/get_setting")
+      fetch("https://esaafy.crazyideaco.com/public/api/get_setting", {
+        method: "get",
+        headers: {
+          "Accept-Language": i18n.locale,
+        },
+      })
         .then((response) => response.json())
         .then((json) => {
           this.setting = json.data;

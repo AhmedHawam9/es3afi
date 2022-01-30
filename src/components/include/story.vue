@@ -58,7 +58,7 @@
 </template>
 
 <script>
-import axios from "axios";
+// import axios from "axios";
 import i18n from "@/plugins/i18n";
 
 export default {
@@ -71,12 +71,12 @@ export default {
 
   methods: {
     getStory: function () {
-      // GET /someUrl
-      // axios.defaults.baseURL = 'https://esaafy.crazyideaco.com/public/api/get_story';
-      const newLocal = i18n.locale;
-      axios.defaults.headers.common["Accept-Language"] = newLocal;
-
-      fetch("https://esaafy.crazyideaco.com/public/api/get_story")
+      fetch("https://esaafy.crazyideaco.com/public/api/get_story",{
+        "method":"get",
+        "headers":{
+          "Accept-Language": i18n.locale,
+        }
+      })
         .then((response) => response.json())
         .then((json) => {
           this.story = json.data;

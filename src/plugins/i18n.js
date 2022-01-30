@@ -16,10 +16,14 @@ function loadLocaleMessages() {
     })
     return messages
 }
+let lang = "ar";
+if( localStorage.getItem('lang')){
+    lang = localStorage.getItem('lang');
+}
 
 const i18n = new VueI18n({
-    locale: 'ar', // set locale
-    fallbackLocale: 'ar', // set fallback locale
+    locale: lang, // set locale
+    fallbackLocale: lang, // set fallback locale
     messages: loadLocaleMessages() // set locale messages
 });
 
