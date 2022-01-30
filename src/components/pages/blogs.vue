@@ -5,7 +5,7 @@
     <!-- start News section -->
     <section class="news bg-transparent">
       <div class="container">
-        <span>{{ $t('last_blogs')}}</span>
+        <span>{{ $t("last_blogs") }}</span>
         <h3 class="header_text">{{ blogs.blog_title }}</h3>
         <p>{{ blogs.blog_text }}</p>
         <div class="row">
@@ -23,21 +23,21 @@
                   {{ blog.date }}
                 </span>
                 <h5 class="card-title">{{ blog.title }}</h5>
-                <p class="card-text">{{blog.text}}</p>
+                <p class="card-text">{{ blog.text }}</p>
                 <!-- v-html="blog.text.substring(0,250) +' ...'" -->
                 <router-link
                   :to="{
                     name: 'signle-blog',
-                    params: { id: blog.id },
-                    query: {
+                    params: {
                       id: blog.id,
+                      image: blog.image,
                       title: blog.title,
                       text: blog.text,
                       date: blog.date,
                     },
                   }"
                   class="btn btn-primary"
-                  >{{ $t('show_more')}}
+                  >{{ $t("show_more") }}
                 </router-link>
               </div>
             </div>

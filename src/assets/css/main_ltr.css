@@ -840,6 +840,7 @@ body:lang(en) .details_new img {
     height: 400px;
     border-radius: 20px;
     margin-bottom: 5%;
+    display: block;
 }
 
 body:lang(en) .details_new h4 {
