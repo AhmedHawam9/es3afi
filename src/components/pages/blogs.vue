@@ -22,20 +22,11 @@
                   <i class="fas fa-calendar-day"></i>
                   {{ blog.date }}
                 </span>
-                <h5 class="card-title">{{ blog.title }}</h5>
-                <p class="card-text">{{ blog.text }}</p>
+                <h5 class="card-title">{{ blog.title | truncate(50) }}</h5>
+                <p class="card-text">{{ blog.text | truncate(150) }}</p>
                 <!-- v-html="blog.text.substring(0,250) +' ...'" -->
                 <router-link
-                  :to="{
-                    name: 'signle-blog',
-                    params: {
-                      id: blog.id,
-                      image: blog.image,
-                      title: blog.title,
-                      text: blog.text,
-                      date: blog.date,
-                    },
-                  }"
+                  :to="`/blog/${blog.id}`"
                   class="btn btn-primary"
                   >{{ $t("show_more") }}
                 </router-link>
@@ -47,10 +38,6 @@
       </div>
     </section>
     <!-- End News section -->
-    <!-- <ul>
-        <li><router-link to="/blog/1?q=1&name=test">blog1</router-link></li>
-        <li><router-link :to="{name: 'signle-blog', params: {id:2}, query: {q:2, name: 'ahmed'} }">blog2</router-link></li>
-        </ul> -->
   </section>
 </template>
 
@@ -79,7 +66,7 @@ export default {
       })
         .then((response) => response.json())
         .then((json) => {
-          this.blogs = json.data.slice(0, 3);
+          this.blogs = json.data;
           // console.log(json);
         });
     },

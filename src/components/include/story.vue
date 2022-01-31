@@ -14,12 +14,24 @@
         </div>
         <div class="col-lg-6 col-sm-12">
           <div class="video" id="video-container">
-            <video id="video" preload="metadata" :poster="story.image">
+            <!-- <video id="video" preload="metadata" :poster="story.image">
               <source :src="story.video" />
-            </video>
+            </video> -->
+
+            <div class="videoCoverImage">
+              <img class="thumb" id="image" :src="story.image" />
+              <div id="thevideo" class="thevideo">
+                <iframe
+                  id="video"
+                  :src="story.video"
+                  frameborder="0"
+                  allowfullscreen=""
+                  include=""
+                ></iframe>
+              </div>
+            </div>
 
             <div title="Play video" class="play" id="circle-play-b">
-              <!-- SVG Play Button -->
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="100"
@@ -71,11 +83,11 @@ export default {
 
   methods: {
     getStory: function () {
-      fetch("https://esaafy.crazyideaco.com/public/api/get_story",{
-        "method":"get",
-        "headers":{
+      fetch("https://esaafy.crazyideaco.com/public/api/get_story", {
+        method: "get",
+        headers: {
           "Accept-Language": i18n.locale,
-        }
+        },
       })
         .then((response) => response.json())
         .then((json) => {
@@ -89,26 +101,16 @@ export default {
   },
 
   mounted() {
-    // playvideo
-    const video = document.getElementById("video");
-    const circlePlayButton = document.getElementById("circle-play-b");
+    document.getElementById("image").addEventListener("click", myFunction);
 
-    function togglePlay() {
-      if (video.paused || video.ended) {
-        video.play();
-      } else {
-        video.pause();
-      }
-    }
-
-    circlePlayButton.addEventListener("click", togglePlay);
-    video.addEventListener("playing", function () {
-      circlePlayButton.style.opacity = 0;
-    });
-    video.addEventListener("pause", function () {
-      circlePlayButton.style.opacity = 1;
-    });
-    // playvideo
+    function myFunction() {
+      // document.getElementById("image").innerHTML = "YOU CLICKED ME!";
+      var thevid = document.getElementById("thevideo");
+      var play = document.getElementById("circle-play-b");
+      thevid.style.display = "block";
+      play.style.display = "none";
+      this.style.display = "none";
+    }"thevid=document.getElementById('thevideo'); thevid.style.display='block'; this.style.display='none'";
   },
 };
 </script>

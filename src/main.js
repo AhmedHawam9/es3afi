@@ -9,18 +9,8 @@ import FlagIcon from 'vue-flag-icon';
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap"
 import "toastify-js/src/toastify.css"
-import JwPagination from 'jw-vue-pagination';
-Vue.component('jw-pagination', JwPagination);
-// import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
-// import 'bootstrap/dist/css/bootstrap.css'
-// import 'bootstrap-vue/dist/bootstrap-vue.css'
-
-// Make BootstrapVue available throughout your project
-// Vue.use(BootstrapVue)
-// Optionally install the BootstrapVue icon components plugin
-// Vue.use(IconsPlugin)
-
-// axios.defaults.baseURL = "https://esaafy.crazyideaco.com/public";
+import VueStringFilter from 'vue-string-filter'
+Vue.use(VueStringFilter)
 
 Vue.use(FlagIcon);
 Vue.config.productionTip = false;

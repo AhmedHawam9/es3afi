@@ -42,17 +42,17 @@
             <div class="d-lg-block">
               <ul>
                 <li>
-                  <router-link class="hvr-float-shadow" to="#"
+                  <router-link class="hvr-float-shadow" to="/"
                     >{{ $t("contact_us") }}
                   </router-link>
                 </li>
                 <li>
-                  <router-link class="hvr-float-shadow" to="#">{{
+                  <router-link class="hvr-float-shadow" to="/">{{
                     $t("download_app")
                   }}</router-link>
                 </li>
                 <li>
-                  <router-link class="hvr-float-shadow" to="#"
+                  <router-link class="hvr-float-shadow" to="/blogs"
                     >{{ $t("blog") }}
                   </router-link>
                 </li>
@@ -64,7 +64,7 @@
             <div class="d-lg-block">
               <ul>
                 <li>
-                  <router-link class="hvr-float-shadow" to="privacy">{{
+                  <router-link class="hvr-float-shadow" to="/privacy">{{
                     $t("privacy")
                   }}</router-link>
                 </li>
@@ -74,7 +74,7 @@
                   }}</router-link>
                 </li>
                 <li>
-                  <router-link class="hvr-float-shadow" to="faq">{{
+                  <router-link class="hvr-float-shadow" to="/faq">{{
                     $t("faq")
                   }}</router-link>
                 </li>
@@ -87,8 +87,7 @@
               <li class="hvr-icon-buzz-out">
                 <i class="far fa-clock hvr-icon"></i>
                 <span
-                  >{{ $t("times_work") }} :08:00 {{ $t("am") }} - 09:00
-                  {{ $t("pm") }}</span
+                  ><a :href="setting.location_link">{{setting.address}}</a></span
                 >
               </li>
               <li class="hvr-icon-buzz-out">

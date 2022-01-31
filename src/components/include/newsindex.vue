@@ -3,7 +3,7 @@
   <section class="news">
     <div class="container">
       <div class="row">
-        <h2 class="header_text">{{ $t('last_blogs')}}</h2>
+        <h2 class="header_text">{{ $t("last_blogs") }}</h2>
         <!-- For loop this card news -->
         <div
           class="col-lg-4 col-sm-12 mb-3 mb-lg-0"
@@ -17,17 +17,19 @@
                 <i class="fas fa-calendar-day"></i>
                 {{ blog.date }}
               </span>
-              <h5 class="card-title">{{ blog.title }}</h5>
-              <p class="card-text">{{ blog.text }}</p>
-              <router-link to="details_new" class="btn btn-primary"
-                >{{ $t('show_more')}}
+              <h5 class="card-title">{{ blog.title | truncate(50) }}</h5>
+              <p class="card-text">{{ blog.text | truncate(150) }}</p>
+              <router-link :to="`/blog/${blog.id}`" class="btn btn-primary"
+                >{{ $t("show_more") }}
               </router-link>
             </div>
           </div>
         </div>
         <!-- For loop this card news -->
         <div class="col-12">
-          <router-link to="blogs" class="btn btn_news">{{$t ('show_more')}} </router-link>
+          <router-link to="blogs" class="btn btn_news"
+            >{{ $t("show_more") }}
+          </router-link>
         </div>
       </div>
     </div>
