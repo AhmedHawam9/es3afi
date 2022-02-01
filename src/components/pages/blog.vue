@@ -21,13 +21,18 @@
             <div class="common_new">
               <h6>اخبار شائعة</h6>
               <!-- single same_topics -->
-              <router-link :to="`/blog/${news.id}`" v-for="news in last_news" :key="news.id" class="single_common_new">
-                <img :src="news.image" alt="new" />
+              <router-link
+                :to="`/blog/${common.id}`"
+                v-for="common in commons"
+                :key="common.id"
+                class="single_common_new"
+              >
+                <img :src="common.image" alt="new" />
                 <div class="text_common_new">
-                  <h6>{{news.title}}</h6>
+                  <h6>{{ common.title }}</h6>
                   <p class="date">
                     <i class="fas fa-calendar-alt"></i>
-                    <span>{{news.date}}</span>
+                    <span>{{ common.date }}</span>
                   </p>
                 </div>
               </router-link>
@@ -39,7 +44,11 @@
             <div class="tags_new">
               <h5>وسوم</h5>
               <ul>
-                <li v-for="tag in tags" :key="tag.id"><router-link to="">#{{tag.title}}</router-link></li>
+                <li v-for="tag in tags" :key="tag.id">
+                  <router-link :to="`/tagblog/${tag.id}`"
+                    >#{{ tag.title }}</router-link
+                  >
+                </li>
               </ul>
             </div>
             <!-- follow -->
@@ -55,16 +64,20 @@
         <div class="row">
           <h2 class="header_text">مقالات مشابهه</h2>
           <!-- For loop this card news -->
-          <div class="col-lg-4 col-sm-12 mb-3 mb-lg-0" v-for="topics in same_topics" :key="topics.id">
+          <div
+            class="col-lg-4 col-sm-12 mb-3 mb-lg-0"
+            v-for="topics in same_topics"
+            :key="topics.id"
+          >
             <div class="card card_news">
               <img :src="topics.image" class="card-img-top" alt="same_topics" />
               <div class="card-body">
                 <span class="date">
                   <i class="fas fa-calendar-day"></i>
-                  {{topics.date}}  
+                  {{ topics.date }}
                 </span>
-                <h5 class="card-title">{{topics.title | truncate(50) }}</h5>
-                <p class="card-text">{{topics.text | truncate(150) }}</p>
+                <h5 class="card-title">{{ topics.title | truncate(50) }}</h5>
+                <p class="card-text">{{ topics.text | truncate(150) }}</p>
                 <router-link :to="`/blog/${topics.id}`" class="btn btn-primary"
                   >عرض المزيد
                 </router-link>
@@ -95,15 +108,16 @@ export default {
       last_news: [],
       same_topics: [],
       tags: [],
+      commons: []
     };
   },
   methods: {
     // Get blog data
     getBlogs: function () {
       // GET /someUrl
-      let id =this.$route.params.id;
+      let id = this.$route.params.id;
       // console.log(id);
-      fetch(`https://esaafy.crazyideaco.com/public/api/single_blog/${id}` , {
+      fetch(`https://esaafy.crazyideaco.com/public/api/single_blog/${id}`, {
         method: "get",
         headers: {
           "Accept-Language": i18n.locale,
@@ -119,10 +133,34 @@ export default {
         });
     },
     // Get blog data
-    
+
+    // Get common blog data
+    getCommon: function () {
+      // GET /someUrl
+      fetch(`https://esaafy.crazyideaco.com/public/api/common_blogs`, {
+        method: "get",
+        headers: {
+          "Accept-Language": i18n.locale,
+        },
+      })
+        .then((response) => response.json())
+        .then((json) => {
+          this.commons = json.data;
+          // console.log(json);
+        });
+    },
+    // Get common blog data
+  },
+  watch: {
+    // call the method if the route changes
+    $route: {
+      handler: "getBlogs",
+      immediate: true, // runs immediately with mount() instead of calling method on mount hook
+    },
   },
   created: function () {
     this.getBlogs();
+    this.getCommon();
   },
 };
 </script>

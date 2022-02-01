@@ -3,8 +3,8 @@
     <Header />
     <section class="terms">
       <div class="container">
-        <p>{{privacy.text}}</p>
-        <!-- <p v-html="terms.text"></p> -->
+        <!-- <p>{{privacy.text}}</p> -->
+        <p v-html="privacy.text"></p>
       </div>
     </section>
   </div>

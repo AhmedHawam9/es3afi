@@ -1,6 +1,6 @@
 <template>
   <!-- start contact section -->
-  <section class="contact">
+  <section class="contact" id="contact">
     <div class="container">
       <h2 class="header_text">{{ $t("contact_us") }}</h2>
       <div class="row">

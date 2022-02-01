@@ -2,7 +2,7 @@
   <!-- start breadcrumb section -->
   <section class="breadcrumb">
     <div class="container-fluid p-0">
-      <img :src="setting.faq_image" alt="header" />
+      <img :src="setting.question_image" alt="header" />
       <div class="text_breadcrumb">
         <h2>{{ $t('faq')}}</h2>
         <p><router-link to="/">{{ $t('home')}}</router-link> > {{ $t('faq')}}</p>

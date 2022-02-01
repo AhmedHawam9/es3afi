@@ -4,6 +4,7 @@ import privacyPage from "./src/components/pages/privacy.vue";
 import faqPage from "./src/components/pages/faq.vue";
 import blogsPage from "./src/components/pages/blogs.vue";
 import blog from "./src/components/pages/blog";
+import tagblog from "./src/components/pages/tagblog";
 import NotFound from "./src/components/pages/error";
 
 const routes = [
@@ -13,6 +14,7 @@ const routes = [
   { path: "/faq", component: faqPage, name: "faq" },
   { path: "/blogs", component: blogsPage, name: "blogs" },
   { path: "/blog/:id", component: blog, props: true, name: "signle-blog" },
+  { path: "/tagblog/:id", component: tagblog, props: true, name: "tag-blog" },
   { path: "/404", component: NotFound },
   { path: "*", redirect: "/404" },
 ];

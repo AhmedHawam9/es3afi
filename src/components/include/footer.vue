@@ -28,12 +28,12 @@
                 ><i class="fab fa-instagram icon"></i
               ></a>
             </li>
-            <!-- <li>
+            <li>
               <a target="_blank"
-                href="https://api.whatsapp.com/send?phone=+966506661277"
+                :href="`https://api.whatsapp.com/send?phone=+966506661277`"
                 ><i class="fab fa-whatsapp icon"></i
               ></a>
-            </li> -->
+            </li>
           </ul>
         </div>
         <div class="d-lg-flex col-lg-8 col-md-12 col-sm-12 mx-auto">
@@ -42,12 +42,12 @@
             <div class="d-lg-block">
               <ul>
                 <li>
-                  <router-link class="hvr-float-shadow" to="/"
+                  <router-link class="hvr-float-shadow" to="/#contact"
                     >{{ $t("contact_us") }}
                   </router-link>
                 </li>
                 <li>
-                  <router-link class="hvr-float-shadow" to="/">{{
+                  <router-link class="hvr-float-shadow" to="/#download">{{
                     $t("download_app")
                   }}</router-link>
                 </li>
@@ -85,7 +85,7 @@
             <div class="h3 d-block">{{ $t("contact_info") }}</div>
             <ul>
               <li class="hvr-icon-buzz-out">
-                <i class="far fa-clock hvr-icon"></i>
+                <i class="fas fa-map-marker-alt"></i>
                 <span
                   ><a :href="setting.location_link">{{setting.address}}</a></span
                 >

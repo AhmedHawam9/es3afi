@@ -29,22 +29,22 @@
             >
           </li>
           <li class="nav-item">
-            <a href="#about" active-class="active" class="nav-link">{{
+            <router-link to="/#about" active-class="active" class="nav-link">{{
               $t("about")
-            }}</a>
+            }}</router-link>
           </li>
           <li class="nav-item">
-            <a href="#services" class="nav-link" active-class="active">{{
+            <router-link to="/#services" class="nav-link" active-class="active">{{
               $t("services")
-            }}</a>
+            }}</router-link>
           </li>
           <li class="nav-item">
-            <a href="#features" class="nav-link" active-class="active">{{
+            <router-link to="/#features" class="nav-link" active-class="active">{{
               $t("features")
-            }}</a>
+            }}</router-link>
           </li>
           <li class="nav-item">
-            <router-link to="blogs" class="nav-link" active-class="active">{{
+            <router-link to="/blogs" class="nav-link" active-class="active">{{
               $t("blog")
             }}</router-link>
           </li>

@@ -3,8 +3,8 @@
     <Header />
     <section class="terms">
       <div class="container">
-        <p>{{terms.text}}</p>
-        <!-- <p v-html="terms.text"></p> -->
+        <!-- <p>{{terms.text}}</p> -->
+        <p v-html="terms.text"></p>
       </div>
     </section>
   </div>
