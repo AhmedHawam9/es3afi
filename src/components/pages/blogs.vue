@@ -6,8 +6,8 @@
     <section class="news bg-transparent">
       <div class="container">
         <span>{{ $t("last_blogs") }}</span>
-        <h3 class="header_text">{{ blogs.blog_title }}</h3>
-        <p>{{ blogs.blog_text }}</p>
+        <h3 class="header_text">{{ blogs_title.blog_title }}</h3>
+        <p>{{ blogs_title.blog_text }}</p>
         <div class="row">
           <!-- For loop this card news -->
           <div
@@ -66,6 +66,7 @@ export default {
       blogs: {},
       meta: {},
       links: {},
+      blogs_title: {}
     };
   },
   methods: {
@@ -79,6 +80,7 @@ export default {
       })
         .then((response) => response.json())
         .then((json) => {
+          this.blogs_title = json;
           this.blogs = json.data;
           this.meta = json.data.meta;
           this.links = json.data.links;
