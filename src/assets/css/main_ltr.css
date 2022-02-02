@@ -1074,14 +1074,21 @@ body:lang(en) .faq .faq_common ul {
 }
 
 body:lang(en) .faq .faq_common ul li {
-  padding: 3% 0;
+  width: 100%;
   border-bottom: 1px solid #626161;
 }
 
-body:lang(en) .faq .faq_common ul li a {
+body:lang(en) .faq .faq_common ul li .nav-link{
+  background-color: transparent;
+  border-color: transparent;
+  width: 100%;
+  text-align: start;
   color: #626161;
   font-family: "regular";
-  text-decoration: none;
+}
+
+body:lang(en) .faq .faq_common ul li .nav-link.active{
+  color: var(--color-primary);
 }
 
 body:lang(en) .faq .accordion-button::after {
