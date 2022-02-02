@@ -26,9 +26,9 @@
       </div>
       <div class="row">
         <div class="screens">
-          <img src="../../assets/media/image/app1.jpg" alt="" />
-          <img src="../../assets/media/image/app.jpg" alt="" />
-          <img src="../../assets/media/image/app2.jpg" alt="" />
+          <img :src="work.image1" alt="work" />
+          <img :src="work.image2" alt="work" />
+          <img :src="work.image3" alt="work" />
         </div>
       </div>
     </div>
