@@ -19,7 +19,7 @@
           <div class="col-lg-4 col-12">
             <!-- same_topics -->
             <div class="common_new">
-              <h6>اخبار شائعة</h6>
+              <h6>{{ $t('common_news')}}</h6>
               <!-- single same_topics -->
               <router-link
                 :to="`/blog/${common.id}`"
@@ -42,7 +42,7 @@
 
             <!-- follow -->
             <div class="tags_new">
-              <h5>وسوم</h5>
+              <h5>{{ $t('tags')}}</h5>
               <ul>
                 <li v-for="tag in tags" :key="tag.id">
                   <router-link :to="`/tagblog/${tag.id}`"
@@ -62,7 +62,7 @@
     <section class="news bg-transparent">
       <div class="container">
         <div class="row">
-          <h2 class="header_text">مقالات مشابهه</h2>
+          <h2 class="header_text">{{ $t('similar_articles')}}</h2>
           <!-- For loop this card news -->
           <div
             class="col-lg-4 col-sm-12 mb-3 mb-lg-0"
@@ -79,7 +79,7 @@
                 <h5 class="card-title">{{ topics.title | truncate(50) }}</h5>
                 <p class="card-text">{{ topics.text | truncate(150) }}</p>
                 <router-link :to="`/blog/${topics.id}`" class="btn btn-primary"
-                  >عرض المزيد
+                  >{{ $t('show_more')}}
                 </router-link>
               </div>
             </div>

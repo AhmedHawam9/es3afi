@@ -7,7 +7,7 @@
         <div class="row">
           <div class="col-lg-4 col-12">
             <div class="faq_common">
-              <h5>الاسئلة الشائعة</h5>
+              <h5>{{ $t('faq')}}</h5>
               <!-- faq common -->
               <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li
@@ -35,7 +35,7 @@
 
               <!-- common_new -->
               <div class="common_new mt-5">
-                <h6>اخبار شائعة</h6>
+                <h6>{{ $t('common_news')}}</h6>
                 <router-link
                   :to="`/blog/${common.id}`"
                   class="single_common_new"
@@ -55,16 +55,6 @@
               <!-- common_new -->
             </div>
           </div>
-
-
-          <!-- <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
-            </li>
-        </ul>
-        <div class="tab-content" id="pills-tabContent">
-          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
-        </div> -->
 
           <div class="col-lg-8 col-12">
             <div class="tab-content">

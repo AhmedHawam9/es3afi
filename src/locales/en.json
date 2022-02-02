@@ -20,7 +20,7 @@
     "help": "Help",
     "privacy": "Privacy & policy",
     "terms": "Terms & conditions",
-    "faq": "Faq",
+    "faq": "Common questions",
     "call_me": "Call me",
     "contact_us_on": "Contact us on",
     "times_work": "Times of work",
@@ -29,5 +29,8 @@
     "rights": "All rights are save",
     "es3afi": "Es3afi",
     "succes_order": "Your order has been successfully sent",
-    "failed_order": "There is a problem in sending your order please try again"
+    "failed_order": "There is a problem in sending your order please try again",
+    "common_news": "Common News",
+    "tags": "Tags",
+    "similar_articles": "Similar articles"
 }

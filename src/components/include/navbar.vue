@@ -79,7 +79,7 @@
             </ul>
           </div>
         </ul>
-        <a href="#download" class="btn download">{{ $t("download_app") }}</a>
+        <router-link to="/#download" class="btn download">{{ $t("download_app") }}</router-link>
       </div>
     </div>
   </nav>
