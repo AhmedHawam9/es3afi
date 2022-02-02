@@ -58,7 +58,7 @@ export default {
       })
         .then((response) => response.json())
         .then((json) => {
-          this.blogs = json.data.slice(0, 3);
+          this.blogs = json.data.data.slice(0, 3);
           // console.log(json);
         });
     },
