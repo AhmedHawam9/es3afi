@@ -466,7 +466,23 @@ body:lang(en) .news {
   background-color: rgba(74, 92, 208, 0.06);
   padding: 5% 0;
 }
-
+body:lang(en) .news .page-item .page-link{
+  background-color: rgba(74, 92, 208, .2);
+  color: var(--color-primary);
+  box-shadow: unset;
+  border-radius: 50%;
+}
+body:lang(en) .news li.page-item.pagination-page-nav, body:lang(en) .news .page-item.pagination-prev-nav, body:lang(en) .news .page-item.pagination-next-nav{
+  margin: 0 .5rem;
+}
+body:lang(en) .news .page-item.pagination-prev-nav, body:lang(en) .news .page-item.pagination-next-nav{
+  transform: scale(1.05);
+}
+body:lang(en) .news .page-item.active .page-link{
+  background-color: var(--color-primary);
+  color: #fff;
+  border-color: unset;
+}
 body:lang(en) .news span {
   color: var(--color-primary);
   font-family: "regular";
