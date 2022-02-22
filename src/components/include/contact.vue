@@ -6,6 +6,7 @@
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12">
           <iframe
+          class="iframemap"
             :src="setting.map_link"
             allowfullscreen=""
             loading="lazy"
@@ -73,6 +74,14 @@
                 required
               />
             </div>
+            <vue-recaptcha
+              ref="invisibleRecaptcha"
+              @verify="onVerify"
+              @expired="onExpired"
+              size="invisible"
+              sitekey="6LdAsZQeAAAAACU3uCIZIz-nNyqFCC6DhO3CXZ8L"
+            >
+            </vue-recaptcha>
             <button type="submit" class="btn">{{ $t("send_message") }}</button>
           </form>
         </div>
@@ -86,6 +95,7 @@
 import axios from "axios";
 import Toastify from "toastify-js";
 import i18n from "@/plugins/i18n";
+import { VueRecaptcha } from 'vue-recaptcha';
 
 export default {
   name: "contact",
@@ -99,6 +109,9 @@ export default {
         message: "",
       },
     };
+  },
+  components: {
+    "vue-recaptcha": VueRecaptcha,
   },
   methods: {
     getSetting: function () {
@@ -125,7 +138,7 @@ export default {
         .then((res) => {
           //Perform Success Action
           Toastify({
-            text: this.$t('succes_order'),
+            text: this.$t("succes_order"),
             className: "Success",
             duration: 3000,
             close: true,
@@ -143,7 +156,7 @@ export default {
         .catch((error) => {
           // error.response.status Check status code
           Toastify({
-            text: this.$t('failed_order'),
+            text: this.$t("failed_order"),
             className: "error",
             duration: 3000,
             close: true,
@@ -157,6 +170,16 @@ export default {
         .finally(() => {
           //Perform action in always
         });
+      this.$refs.invisibleRecaptcha.execute();
+    },
+    onVerify: function (response) {
+      console.log("Verify: " + response);
+    },
+    onExpired: function () {
+      console.log("Expired");
+    },
+    resetRecaptcha() {
+      this.$refs.recaptcha.reset(); // Direct call reset method
     },
   },
   created: function () {

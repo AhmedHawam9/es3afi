@@ -13,6 +13,11 @@ import "toastify-js/src/toastify.css";
 import VueStringFilter from "vue-string-filter";
 Vue.use(VueStringFilter);
 
+
+import VueCompositionAPI from '@vue/composition-api'
+Vue.use(VueCompositionAPI)
+
+
 Vue.use(FlagIcon);
 Vue.config.productionTip = false;
 Vue.use(VueRouter);

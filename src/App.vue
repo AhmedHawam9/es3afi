@@ -12,9 +12,9 @@ import navbar from "./components/include/navbar.vue";
 import Footer from "./components/include/footer.vue";
 // import i18n from "@/plugins/i18n";
 
-require("./assets/js/fontawesome.min.js");
-require("./assets/js/all.min.js");
-require("./assets/css/fontawesome.min.css");
+// require("./assets/js/fontawesome.min.js");
+// require("./assets/js/all.min.js");
+// require("./assets/css/fontawesome.min.css");
 require("./assets/css/hover-min.css");
 // require("./assets/css/lang.css");
 // require("./assets/css/style.css");
