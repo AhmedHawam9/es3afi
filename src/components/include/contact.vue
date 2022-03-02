@@ -130,6 +130,8 @@ export default {
     },
 
     submitForm() {
+      
+      this.$refs.invisibleRecaptcha.execute();
       axios
         .post(
           "https://esaafy.crazyideaco.com/public/api/web_contact",
@@ -170,7 +172,6 @@ export default {
         .finally(() => {
           //Perform action in always
         });
-      this.$refs.invisibleRecaptcha.execute();
     },
     onVerify: function (response) {
       console.log("Verify: " + response);

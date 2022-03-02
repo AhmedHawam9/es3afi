@@ -12,7 +12,7 @@
               {{ blog.date }}
             </span>
             <h4>{{ blog.title }}</h4>
-            <p>{{ blog.text }}</p>
+            <p v-html="blog.text"></p>
             <!-- <p v-html="blog.text"></p> -->
           </div>
 
