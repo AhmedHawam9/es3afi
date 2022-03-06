@@ -98,7 +98,7 @@
               </li>
               <li class="hvr-icon-buzz-out">
                 <i class="far fa-envelope hvr-icon"></i>
-                <a :href="`tel:${setting.email}`">
+                <a :href="`mailto:${setting.email}`">
                   {{ setting.email }} : {{ $t("contact_us_on") }}</a
                 >
               </li>
