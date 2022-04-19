@@ -24,7 +24,10 @@ Vue.use(VueRouter);
 Vue.use(VueI18n);
 
 const router = new VueRouter({
-  mode: "history",
+  hashbang: false,
+  history: true,
+  mode: 'html5',
+  linkActiveClass: "active",
   routes: routes,
 
   scrollBehavior: function (to) {
