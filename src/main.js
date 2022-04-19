@@ -1,7 +1,7 @@
 import Vue from "vue";
 import App from "./App.vue";
 import VueRouter from "vue-router";
-import {createWebHashHistory} from "vue-router";
+// import {createWebHashHistory} from "vue-router";
 import routes from "../routes";
 import VueI18n from "vue-i18n";
 import i18n from "./plugins/i18n";
@@ -27,7 +27,7 @@ Vue.use(VueI18n);
 const router = new VueRouter({
   mode: "html5",
   routes: routes,
-  history: createWebHashHistory(),
+  // history: createWebHashHistory(),
   scrollBehavior: function (to) {
     if (to.hash) {
       return {
