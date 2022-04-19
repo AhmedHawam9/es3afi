@@ -77,7 +77,7 @@
                   {{ topics.date }}
                 </span>
                 <h5 class="card-title">{{ topics.title | truncate(50) }}</h5>
-                <p class="card-text">{{ topics.text | truncate(150) }}</p>
+                <p class="card-text" v-html="topics.text.substring(0,250) +' ...'"></p>
                 <router-link :to="`/blog/${topics.id}`" class="btn btn-primary"
                   >{{ $t('show_more')}}
                 </router-link>
