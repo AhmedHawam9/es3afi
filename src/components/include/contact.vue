@@ -79,7 +79,7 @@
               @verify="onVerify"
               @expired="onExpired"
               size="invisible"
-              sitekey="6LdAsZQeAAAAACU3uCIZIz-nNyqFCC6DhO3CXZ8L"
+              sitekey="6LcLEoUfAAAAAD32ZWjSk6RoXgq_Ly-LM2h3rxI2"
             >
             </vue-recaptcha>
             <button type="submit" class="btn">{{ $t("send_message") }}</button>

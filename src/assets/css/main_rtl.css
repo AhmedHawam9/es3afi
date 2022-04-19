@@ -699,6 +699,8 @@ body:lang(ar) .work .screens img {
   box-shadow: 4px 8px 36px rgba(29, 27, 27, 0.15);
   border-radius: 10px;
   height: 700px;
+  width: 33%;
+  display: block;
 }
 
 body:lang(ar) .work .screens img:first-child,
